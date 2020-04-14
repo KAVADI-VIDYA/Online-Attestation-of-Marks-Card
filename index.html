@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://localhost/WTProject/styles.css">
+    <style>
+        p{
+            font-size: 45px;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src='https://localhost/WTProject/kle8.png' width="40px" height="40px" />
+        <label>KLE's Dr M S Sheshgiri College of Engineering and Technology</label>
+    </header>
+    <br>
+    <br>
+    <br>
+    <center><p>Login As</p>
+        <form action="https://localhost/WTProject/login.php" method="post">
+            <input type="hidden" value="student" name="role" id = "role">
+            <input type="submit" class="btn btn-primary btn-lg col-sm-offset-3 col-sm-6" style="font-size: 30px;font-style: bold; text-align: center; height: 60px; margin-top:20px; margin-bottom: 20px;" value="STUDENT">
+        </form>
+        <brs>
+        <form action="https://localhost/WTProject/login.php" method="post">
+            <input type="hidden" value="admin" name="role" id = "role">
+            <input type="submit" class="btn btn-primary btn-lg col-sm-offset-3 col-sm-6" style="font-size: 30px;font-style: bold; text-align: center; height: 60px; margin-top:20px; margin-bottom: 20px;" value="ADMINISTRATOR">
+        </form>
+    </center>
+</body>
+</html>
+        

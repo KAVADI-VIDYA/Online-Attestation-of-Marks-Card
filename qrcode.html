@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QRCode</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function generateQR()
+		{
+			var sample = "KLESMSSCET" + "\n" + "COMPUTERSCIENCE" + "\n" + document.getElementById("name").value + "\n" + document.getElementById("email").value + "\n" + document.getElementById("phno").value;
+			$.ajax({
+				type: 'post',
+				url: 'generator.php',
+				data: {sample:sample},
+				success: function(code){
+					$('#result').html(code);
+				}
+			});
+		}
+	</script>
+</head>
+<body>
+	Name:<input type="text" name="name" id="name">
+	E-mail:<input type="text" name="email" id="email">
+	Phone:<input type="number" name="phno" id="phno">
+	<br>
+	<br>
+	<div id="result"></div>
+	<button onclick="generateQR()">Generate</button>
+</body>
+</html>
